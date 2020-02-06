@@ -1,12 +1,12 @@
 import React, {Component, useState} from 'react'
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, withRouter} from "react-router-dom";
 import Login from "./Login"
 import Registration from "./Registration"
 import Dashboard from "./Dashboard"
 import axios from "axios"
 
 
-export default class Home extends Component {
+class Home extends Component {
     
     constructor(props) {
         super(props);
@@ -63,3 +63,5 @@ export default class Home extends Component {
         )
     }
 }
+
+export default Home;

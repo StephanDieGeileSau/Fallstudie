@@ -84,6 +84,7 @@ export default function Login(props) {
     };
 
     function handleLogin(){
+        console.log(user)
         user.map(item =>{
             if (item.email.toLowerCase() === values.email.toLowerCase() && item.password === values.password){
                 props.history.push("/dashboard/" + item.id)

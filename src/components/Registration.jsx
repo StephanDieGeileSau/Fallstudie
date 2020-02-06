@@ -6,6 +6,8 @@ import uuidv4 from "uuid/v4"
 import axios from "axios"
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
+import {withRouter } from 'react-router-dom';
+
 
 //style for Modal
 function rand() {
@@ -136,4 +138,4 @@ const Registration = (props) => {
         </div>
     )
 }
-export default Registration;
+export default withRouter(Registration);
