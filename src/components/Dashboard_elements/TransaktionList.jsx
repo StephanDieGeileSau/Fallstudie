@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, useEffect} from 'react'
 import Transaktion from './Transaktion'
 import axios from "axios"
 import Button from '@material-ui/core/Button';
@@ -13,10 +13,11 @@ class Page extends Component {
             transactions : [],
             dates : [],
             user: props.user,
-            bankvalue : 0
+            bankvalue : 0,
+            updated : false
             }
     }
-    
+
     getDatabaseUpdate(){
         axios.get("https://fallstudie-dhbw.firebaseio.com/transactions.json").then(
         response =>   {
@@ -32,6 +33,7 @@ class Page extends Component {
         this.usersTransactions()
         this.getDates()
         this.calculateBankacc()
+        console.log(this.state.bankvalue)
     })}
 
     getDates(){
@@ -41,9 +43,7 @@ class Page extends Component {
 
     componentDidMount() {
       this._isMounted = true;
-    
       this.getDatabaseUpdate()
-
     }
   
     componentWillUnmount() {
@@ -67,16 +67,18 @@ class Page extends Component {
             const x = this.state.bankvalue + trans.value
             this.state.bankvalue = x
         })
+        this.state.updated = true
     }
 
     
   
     render() {
-        
+      
+        console.log(this.state.bankvalue)
       return (
         <React.Fragment>
         <div>
-        <h1>Kontostand: {this.state.bankvalue}</h1>
+            <h1>Kontostand: {this.state.bankvalue}</h1>
         <ul>
             {
             this.state.dates.map(date =>{

@@ -14,7 +14,7 @@ export default function Dashboard({match}) {
     return (
         <div>
             <Link to="/login">NTC Banking</Link>
-            <NewsSlider/>
+            <NewsSlider/> 
             <Actions/>
             <TransaktionList user={current_user_id}/>
             <Question/>
