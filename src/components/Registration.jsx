@@ -108,18 +108,39 @@ const Registration = (props) => {
 
     return (
         <div>
-            <Link to="/login">NTC Banking</Link>
+            <div>
+                <a href="fts_konto.htm">
+                    <h1 class="ntc">NTC</h1>
+                </a>
+            </div>
+            <div>
+                <h5 class="ntc2">Banking </h5>
+            </div>
             <form noValidate autoComplete="off">
-                <TextField value={values.email} onChange={handleChange("email")} label="E-Mail" variant="outlined" />
-                <TextField type={false ? 'text' : 'password'} value={values.password} onChange={handleChange("password")} label="Passwort" variant="outlined" />
-                <TextField type={false ? 'text' : 'password'} value={password2} error={error} onChange={handleChangePW()} label="Passwort wiederholen" variant="outlined" />
-                <TextField value={values.name} onChange={handleChange("name")} label="Name" variant="outlined" />
-                <TextField value={values.lastname} onChange={handleChange("lastname")}label="Nachname" variant="outlined" />
-                <TextField value={values.adress} onChange={handleChange("adress")}label="Adresse" variant="outlined" />
-                <TextField value={values.zip_code} onChange={handleChange("zip_code")}label="Postleitzahl" variant="outlined" />
-                <TextField value={values.city} onChange={handleChange("city")} label="Stadt" variant="outlined" />
-                <TextField value={values.phone} onChange={handleChange("phone")}label="Telefonnummer" variant="outlined" />
-                <Button disabled={error} onClick={handleAddElement} variant="contained">Registrieren</Button>
+              <table>
+                <tr>
+                  <td colspan="2"><TextField id="col" value={values.email} onChange={handleChange("email")} label="E-Mail" variant="outlined" /></td>
+                </tr>
+                <tr>
+                  <td><TextField type={false ? 'text' : 'password'} value={values.password} onChange={handleChange("password")} label="Passwort" variant="outlined" /></td>
+                  <td><TextField type={false ? 'text' : 'password'} value={password2} error={error} onChange={handleChangePW()} label="Passwort wiederholen" variant="outlined" /></td>
+                </tr>
+                <tr>
+                  <td><TextField value={values.name} onChange={handleChange("name")} label="Name" variant="outlined" /></td>
+                  <td><TextField value={values.lastname} onChange={handleChange("lastname")}label="Nachname" variant="outlined" /></td>
+                </tr>
+                <tr>
+                  <td><TextField value={values.adress} onChange={handleChange("adress")}label="Adresse" variant="outlined" /></td>
+                  <td><TextField value={values.zip_code} onChange={handleChange("zip_code")}label="Postleitzahl" variant="outlined" /></td>
+                </tr>
+                <tr>
+                  <td><TextField value={values.city} onChange={handleChange("city")} label="Stadt" variant="outlined" /></td>
+                  <td><TextField value={values.phone} onChange={handleChange("phone")}label="Telefonnummer" variant="outlined" /></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><br></br><Button id="click" disabled={error} onClick={handleAddElement} variant="contained">Registrieren</Button></td>
+                </tr>
+              </table>
                 <Modal
                     aria-labelledby="simple-modal-title"
                     aria-describedby="simple-modal-description"

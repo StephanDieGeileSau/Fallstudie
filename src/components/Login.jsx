@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import axios from "axios"
+import "./fts_style.css"
 
 
 function rand() {
@@ -98,11 +99,32 @@ export default function Login(props) {
 
     return (
         <div>
+            <div>
+                <a href="fts_konto.htm">
+                    <h1 class="ntc">NTC</h1>
+                </a>
+            </div>
+            <div>
+                <h5 class="ntc2">Banking </h5>
+            </div>
             <form noValidate autoComplete="off">
-                <TextField value={values.email} onChange={handleChange("email")} label="E-Mail" variant="outlined" />
-                <TextField type={false ? 'text' : 'password'} value={values.password} onChange={handleChange("password")} label="Passwort" variant="outlined" />
-                <Button onClick={handleLogin} variant="contained">Login</Button>
-                <Button variant="contained" component={Link} to={'/registration'}>Registrieren</Button>
+                <table>
+                    <tr>
+                        <td><TextField value={values.email} onChange={handleChange("email")} label="E-Mail" variant="outlined" /></td>
+                    </tr>
+                    <tr>
+                        <td><TextField type={false ? 'text' : 'password'} value={values.password} onChange={handleChange("password")} label="Passwort" variant="outlined" /></td>
+                    </tr>
+                    <tr>
+                        <td><br></br><br></br></td>
+                    </tr>
+                    <tr>
+                        <td><Button id="click" onClick={handleLogin} variant="contained">Login</Button></td>
+                    </tr>
+                    <tr>
+                        <td><Button id="click" variant="contained" component={Link} to={'/registration'}>Registrieren</Button></td>
+                    </tr>
+                </table>
                 <Modal
                     aria-labelledby="simple-modal-title"
                     aria-describedby="simple-modal-description"
