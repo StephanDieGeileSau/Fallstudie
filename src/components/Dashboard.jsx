@@ -14,7 +14,7 @@ export default function Dashboard({match}) {
     return (
         <div>
             <div>
-                <a href="fts_konto.htm">
+                <a href="login">
                     <h1 class="ntc">NTC</h1>
                 </a>
             </div>
@@ -22,7 +22,7 @@ export default function Dashboard({match}) {
                 <h5 class="ntc2">Banking </h5>
             </div>
             <NewsSlider/> 
-            <Actions/>
+            <Actions user={current_user_id}/>
             <TransaktionList user={current_user_id}/>
             <Question/>
         </div>

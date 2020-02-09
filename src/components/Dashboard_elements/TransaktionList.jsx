@@ -33,7 +33,6 @@ class Page extends Component {
         this.usersTransactions()
         this.getDates()
         this.calculateBankacc()
-        console.log(this.state.bankvalue)
     })}
 
     getDates(){
@@ -67,7 +66,7 @@ class Page extends Component {
             const x = this.state.bankvalue + trans.value
             this.state.bankvalue = x
         })
-        this.state.updated = true
+        this.forceUpdate()
     }
 
     

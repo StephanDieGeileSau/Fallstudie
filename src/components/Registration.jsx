@@ -99,6 +99,7 @@ const Registration = (props) => {
             phone:""
           });
         setPassword2("")
+        props.history.push("/login")
     }
 
     const handleClose = () => {
@@ -109,7 +110,7 @@ const Registration = (props) => {
     return (
         <div>
             <div>
-                <a href="fts_konto.htm">
+                <a href="login">
                     <h1 class="ntc">NTC</h1>
                 </a>
             </div>
