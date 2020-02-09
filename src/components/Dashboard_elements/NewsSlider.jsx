@@ -1,37 +1,33 @@
 import React from 'react'
+import ".././fts_style.css"
 
 export default function NewsSlider() {
     return (
         <React.Fragment>
         <div>
-            <div id="carouselExampleIndicators" class="carousel slide gallery" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="https://www.finanzen.de/"><img src="../Bilder/first.png" class="d-block w-100" alt="..."/></a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="https://www.finanzen.de/"><img src="../Bilder/second.png" class="d-block w-100" alt="..."/></a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="https://www.finanzen.de/"><img src="../Bilder/apple.png" class="d-block w-100" alt="..."/></a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="https://www.finanzen.de/"><img src="../Bilder/finanzmarkt.png" class="d-block w-100" alt="..."/></a>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            <div class="wrap">
+            <header>
+                <label for="slide-1-trigger">Slide One</label>
+                <label for="slide-2-trigger">Slide Two</label>
+                <label for="slide-3-trigger">Slide Three</label>
+                <label for="slide-4-trigger">Slide Four</label>
+            </header>
+            <input id="slide-1-trigger" type="radio" name="slides" checked/>
+            <section class="slide slide-one">
+                <h1>Headline One</h1>
+            </section>
+            <input id="slide-2-trigger" type="radio" name="slides"/>
+            <section class="slide slide-two">
+                <h1>Headline Two</h1>
+            </section>
+            <input id="slide-3-trigger" type="radio" name="slides"/>
+            <section class="slide slide-three">
+                <h1>Headline Three</h1>
+            </section>
+            <input id="slide-4-trigger" type="radio" name="slides"/>
+            <section class="slide slide-four">
+                <h1>Headline Four</h1>
+            </section>
             </div>
         </div>
         </React.Fragment>
