@@ -14,9 +14,7 @@ export default function Dashboard({match}) {
     return (
         <div>
             <div>
-                <a href="login">
-                    <h1 class="ntc">NTC</h1>
-                </a>
+                <Link to ={"/login"} class='ntc'>NTC</Link>
             </div>
             <div>
                 <h5 class="ntc2">Banking </h5>

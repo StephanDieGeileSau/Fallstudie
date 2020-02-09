@@ -4,6 +4,9 @@ import Login from "./Login"
 import Registration from "./Registration"
 import Dashboard from "./Dashboard"
 import axios from "axios"
+import Beratungstermin from "./Dashboard_elements/ActionPages/Beratungstermin"
+import Überweisung from './Dashboard_elements/ActionPages/Überweisung';
+import Kredit from "./Dashboard_elements/ActionPages/Kredit"
 
 
 class Home extends Component {
@@ -55,7 +58,10 @@ class Home extends Component {
             <Switch>
                 <Route path="/login" render={(props) => <Login {...props} user={this.state.user} userLogin={this.userLogin} />} />
                 <Route path="/registration" render={(props) => <Registration {...props} state={this.state} />}/>
-                <Route path='/dashboard/:id' component={Dashboard}/>                 
+                <Route path="/dashboard/:id/beratungsgespräch" component={Beratungstermin}/>
+                <Route path="/dashboard/:id/kreditanfrage" component={Kredit}/>                 
+                <Route path="/dashboard/:id/überweisung" component={Überweisung}/>                 
+                <Route path='/dashboard/:id' component={Dashboard}/>
                 <Route path="/" exact component={Login}/>
             </Switch>
             </div>

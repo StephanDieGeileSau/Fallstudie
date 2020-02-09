@@ -10,11 +10,10 @@ export default function Actions(props) {
     return (
         <div>
             
-        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/${props.user}/beratungsgespräch'}>Beratungstermin</Button></td>
+        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/beratungsgespräch"}>Beratungstermin</Button></td>
+        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/kreditanfrage"}>Kreditanfrage</Button></td>
+        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/überweisung"}>Überweisung</Button></td>
 
-            <Route path="/dashboard/:id/beratungsgespräch" component={Beratungstermin}/>
-            <Route/>
-            <Route/>
         </div>
     )
 }

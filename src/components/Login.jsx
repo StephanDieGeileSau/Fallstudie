@@ -100,9 +100,7 @@ export default function Login(props) {
     return (
         <div>
             <div>
-                <a href="fts_konto.htm">
-                    <h1 class="ntc">NTC</h1>
-                </a>
+                <Link to ={"/login"} class='ntc'>NTC</Link>
             </div>
             <div>
                 <h5 class="ntc2">Banking </h5>
