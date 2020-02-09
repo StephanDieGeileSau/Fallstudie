@@ -5,9 +5,13 @@ export default function Transaktion(props) {
         props.transactions.map(trans =>{
             return(
                 <div>
-                {trans.receipient}
-                {trans.value}
-                {trans.purpose}
+                    <table id="transaktion">
+                        <tr>
+                            <td id="transreceipent">{trans.receipient}</td>
+                            <td id="transvalue">{trans.value} €</td>
+                        </tr>
+                            <td id="transpurpose" colspan="2">{trans.purpose}</td>
+                    </table>
                 </div>
             )
         })
