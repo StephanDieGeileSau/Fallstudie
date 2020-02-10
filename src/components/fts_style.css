@@ -9,12 +9,6 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
-table {
-    margin-top: 4%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 td {
     text-align: center;
 }
@@ -105,9 +99,10 @@ body#registrieren {
     width: 150px;
 }
 #transaktion {
-    margin-left: 20px;
+    margin-left: 0px;
     border-style: solid;
     border-radius: 8px;
+    margin-top: 5px;
 
 }
 #transpurpose {
@@ -131,4 +126,25 @@ body#registrieren {
     text-align: right;
     padding-top: 0px;
 }
+<<<<<<< HEAD
   
+=======
+.kontostand {
+    margin-left: 60px;
+}
+.date {
+    margin-left: 20px;
+}
+.buttons {
+    margin-left: 60px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+#dashboard {
+    background-color: lightgray;
+    margin: 50px;
+    padding: 5%;
+}
+>>>>>>> 96411d1c9991979df2849c6688753270c0815646

@@ -3,12 +3,12 @@ import {BrowserRouter as Router, Switch, Route, withRouter} from "react-router-d
 import Beratungstermin from "./ActionPages/Beratungstermin"
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-
+import ".././fts_style.css"
 
 export default function Actions(props) {
     console.log(props)
     return (
-        <div>
+        <div class="buttons">
             
         <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/beratungsgespräch"}>Beratungstermin</Button></td>
         <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/kreditanfrage"}>Kreditanfrage</Button></td>

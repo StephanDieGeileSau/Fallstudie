@@ -12,7 +12,7 @@ export default function Dashboard({match}) {
 
 
     return (
-        <div>
+        <div id="dashboard">
             <div>
                 <Link to ={"/login"} class='ntc'>NTC</Link>
             </div>
