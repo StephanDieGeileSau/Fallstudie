@@ -14,8 +14,8 @@ export default function NewsSlider() {
         centerPadding: 250,
         duration: 300,
         autoplaySpeed: 6000,
-        width: 50,
-        shift: 70,
+        shift: 200,
+        width: 100,
         arrows: false
       };
     return (

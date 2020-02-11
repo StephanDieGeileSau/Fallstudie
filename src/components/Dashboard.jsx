@@ -13,8 +13,8 @@ export default function Dashboard({match}) {
 
     return (
         <div id="dashboard">
-            <div>
-                <Link to ={"/login"} class='ntc'>NTC</Link>
+            <div class='ntc'>
+                <Link to ={"/login"}>NTC</Link>
             </div>
             <div>
                 <h5 class="ntc2">Banking </h5>

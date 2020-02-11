@@ -8,12 +8,14 @@ import ".././fts_style.css"
 export default function Actions(props) {
     console.log(props)
     return (
-        <div class="buttons">
-            
-        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/beratungsgespräch"}>Beratungstermin</Button></td>
-        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/kreditanfrage"}>Kreditanfrage</Button></td>
-        <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/überweisung"}>Überweisung</Button></td>
-
+        <div>
+            <table>
+                <tr>
+                    <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/beratungsgespräch"}>Beratungstermin</Button></td>
+                    <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/kreditanfrage"}>Kreditanfrage</Button></td>
+                    <td><Button id="click" variant="contained" component={Link} to={'/dashboard/'+props.user+"/überweisung"}>Überweisung</Button></td>
+                </tr>
+            </table>
         </div>
     )
 }
