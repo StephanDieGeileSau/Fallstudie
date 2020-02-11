@@ -1,10 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-export default function Kredit() {
+export default function Kredit({match}) {
+    const current_user_id = match.params.id
+
     return(
+        <React.Fragment>
+        <div>
+                <Link to ={"/dashboard/"+current_user_id} class='ntc'>NTC</Link>
+            </div>
+            <div>
+                <h5 class="ntc2">Banking </h5>
+        </div>
         <div>
             Kredit
         </div>
+        </React.Fragment>
     )
     // return (
     //     <div id="kredit">

@@ -1,11 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { findAllByDisplayValue } from '@testing-library/react'
 
-export default function Beratungstermin() {
+export default function Beratungstermin({match}) {
+    const current_user_id = match.params.id
+
     return(
+        <React.Fragment>
+        <div>
+                <Link to ={"/dashboard/"+current_user_id} class='ntc'>NTC</Link>
+            </div>
+            <div>
+                <h5 class="ntc2">Banking </h5>
+        </div>
         <div>
             Beratungsgespräch
         </div>
+        </React.Fragment>
     )
     // return (
     //     <React.fragment>

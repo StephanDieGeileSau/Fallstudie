@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-
-
-export default function NewsSlider() {
-
-   
-    return (
-        <div>
-
-        </div>
-    )
-=======
 import React from 'react';
 import Slider from 'infinite-react-carousel';
 import first from "../Bilder/first.png"
@@ -52,5 +38,4 @@ export default function NewsSlider() {
             </div>
         </React.Fragment>
         )
->>>>>>> 96411d1c9991979df2849c6688753270c0815646
 }

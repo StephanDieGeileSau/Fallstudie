@@ -77,7 +77,7 @@ class Page extends Component {
       return (
         <React.Fragment>
         <div>
-            <h1 class="kontostand">Kontostand: {this.state.bankvalue}</h1>
+            <h1 class="kontostand">Kontostand: {this.state.bankvalue} €</h1>
         <ul class="date">
             {
             this.state.dates.map(date =>{

@@ -7,7 +7,16 @@ import axios from "axios"
 import Beratungstermin from "./Dashboard_elements/ActionPages/Beratungstermin"
 import Überweisung from './Dashboard_elements/ActionPages/Überweisung';
 import Kredit from "./Dashboard_elements/ActionPages/Kredit"
+import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 
+const history = createBrowserHistory();
+
+history.listen(location => {
+    ReactGA.set({ page: location.pathname }); // Update the user's current page
+    ReactGA.pageview(location.pathname); // Record a pageview for the given page
+  });
 
 class Home extends Component {
     
@@ -24,6 +33,8 @@ class Home extends Component {
 
         this.userLogin = this.userLogin.bind(this)
     }
+
+    
   
     componentDidMount(){
         axios.get("https://fallstudie-dhbw.firebaseio.com/persons.json").then(
@@ -53,7 +64,7 @@ class Home extends Component {
     render() {
 
         return (
-        <Router>
+        <Router history={history}>
             <div>
             <Switch>
                 <Route path="/login" render={(props) => <Login {...props} user={this.state.user} userLogin={this.userLogin} />} />
