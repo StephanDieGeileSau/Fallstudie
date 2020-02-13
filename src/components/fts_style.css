@@ -143,3 +143,13 @@ table {
     margin: 50px;
     padding: 50px;
 }
+.Carousel-wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.questionbox {
+    margin-left: 100px;
+    margin-right: auto;    
+}

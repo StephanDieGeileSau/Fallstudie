@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import QuestionCard from "./QuestionCard"
 import axios from "axios"
+import ".././fts_style.css"
 
 const Today = new Date
 const splt = Today.getDay()
@@ -39,8 +40,8 @@ export default class Question extends Component {
       this.state.questions.map(question => {
         if (question.id === splt.toString() && this.state.day_answer !== true) {
           return (
-          <div>
-          <QuestionCard question={question}/>
+          <div id="questionbox">
+            <QuestionCard question={question}/>
           </div>
           )
         }
