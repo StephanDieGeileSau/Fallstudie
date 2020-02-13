@@ -19,10 +19,14 @@ export default function Dashboard({match}) {
             <div>
                 <h5 class="ntc2">Banking </h5>
             </div>
+            
             <NewsSlider/> 
             <Actions user={current_user_id}/>
             <TransaktionList user={current_user_id}/>
+            <ul>
             <Question user={current_user_id}/>
+            </ul>
+            
         </div>
     )
 }
