@@ -89,7 +89,6 @@ class Page extends Component {
         })
         }
         </ul>
-        
         </div>           
         </React.Fragment>
         )
