@@ -73,7 +73,6 @@ class Page extends Component {
   
     render() {
       
-        console.log(this.state.bankvalue)
       return (
         <React.Fragment>
         <div>

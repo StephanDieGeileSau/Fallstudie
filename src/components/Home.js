@@ -58,8 +58,6 @@ class Home extends Component {
     }
 
 
-    //Karl fragen wie ich componentDidMount wie useEffect mit leerem Event nutzen kann
-
 
     render() {
 

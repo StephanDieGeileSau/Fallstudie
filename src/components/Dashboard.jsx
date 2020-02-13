@@ -22,7 +22,7 @@ export default function Dashboard({match}) {
             <NewsSlider/> 
             <Actions user={current_user_id}/>
             <TransaktionList user={current_user_id}/>
-            <Question/>
+            <Question user={current_user_id}/>
         </div>
     )
 }

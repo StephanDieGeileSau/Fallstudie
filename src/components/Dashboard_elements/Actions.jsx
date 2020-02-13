@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import ".././fts_style.css"
 
 export default function Actions(props) {
-    console.log(props)
     return (
         <div>
             <table>
