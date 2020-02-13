@@ -7,8 +7,8 @@ export default function Beratungstermin({match}) {
 
     return(
         <React.Fragment>
-        <div>
-                <Link to ={"/dashboard/"+current_user_id} class='ntc'>NTC</Link>
+        <div class="ntc">
+                <Link to ={"/dashboard/"+current_user_id}>NTC</Link>
             </div>
             <div>
                 <h5 class="ntc2">Banking </h5>
