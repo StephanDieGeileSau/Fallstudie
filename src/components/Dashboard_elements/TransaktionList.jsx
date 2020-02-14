@@ -72,7 +72,7 @@ class Page extends Component {
     
   
     render() {
-      
+      console.log(this.state.transactions)
       return (
         <React.Fragment>
         <div>
