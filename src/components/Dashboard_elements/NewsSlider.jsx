@@ -10,10 +10,12 @@ export default function NewsSlider() {
     const settings =  {
         dots: true,
         autoplay: true,
-        duration: 300,
-        autoplaySpeed: 60000,
+        duration: 5000,
+        autoplay: true,
+        autoplaySpeed: 100,
         arrows: false,
         showThumbs: false,
+        infinite: true,
       };
 
     return (

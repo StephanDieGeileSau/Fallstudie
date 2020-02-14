@@ -40,9 +40,11 @@ export default class Question extends Component {
       this.state.questions.map(question => {
         if (question.id === splt.toString() && this.state.day_answer !== true) {
           return (
-          <div id="questionbox">
-            <QuestionCard question={question}/>
-          </div>
+          <table id="questionbox">
+            <tr>
+              <td><QuestionCard question={question}/></td>
+            </tr>
+          </table>
           )
         }
       })
